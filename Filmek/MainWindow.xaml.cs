@@ -56,8 +56,63 @@ new FilmAdatok("Shrek", "animáció", 90, 7.9)
         private void Button_Click(object sender, RoutedEventArgs e){
             dataGrid.ItemsSource = filmek;
             dataGrid.Items.Refresh();
-            
+            var leghosszabb = filmek.Max(film => film.Hossz);
+            progress.Maximum = leghosszabb;
+            progress.Minimum = 0;
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Összesen {filmek.Count} film van");
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+            var leghosszabb = filmek.Max(film => film.Hossz);
+
+            foreach (FilmAdatok film in filmek) {
+                if (film.Hossz == leghosszabb) {
+                    MessageBox.Show($"A leghosszabb film: {film.Cím} ({film.Hossz} perc).");
+                    break;
+                }
             }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            double atlag = filmek.Average(film => film.Értékelés);
+
+            MessageBox.Show($"A filmek átlagos értékelése: {Math.Round(atlag,1)}");
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var scifik = filmek.Where(film => film.Műfaj == "sci-fi").ToList();
+
+            dataGrid.ItemsSource = scifik;
+
+            dataGrid.Items.Refresh();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var CsakShrek = filmek.Where(film => film.Cím.Contains("Shrek")).ToList();
+
+            dataGrid.ItemsSource = CsakShrek;
+            dataGrid.Items.Refresh();
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            var cimSzerint = filmek.OrderBy(film => film.Cím).ToList();
+
+            dataGrid.ItemsSource = cimSzerint;
+            dataGrid.Items.Refresh();
+        }
+
+
     }        
     
 }

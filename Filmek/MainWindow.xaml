@@ -14,12 +14,12 @@
 
         <StackPanel Grid.Column="0">
             <Button Content="Filmek betöltése" Width="150" Height="30" Margin="10 10" Click="Button_Click"></Button>
-            <Button Content="Hány film van?" Width="150" Height="30" Margin="10  10"></Button>
-            <Button Content="Leghosszabb film" Width="150" Height="30" Margin="10 10"></Button>
-            <Button Content="Átlag értékelés" Width="150" Height="30" Margin="10 10"></Button>
-            <Button Content="Csak Sci-fi" Width="150" Height="30" Margin="10 10"></Button>
-            <Button Content="Csak Shrek" Width="150" Height="30" Margin="10 10"></Button>
-            <Button Content="Rendezés cím szerint" Width="150" Height="30" Margin="10 10"></Button>
+            <Button Content="Hány film van?" Width="150" Height="30" Margin="10  10" Click="Button_Click_1"></Button>
+            <Button Content="Leghosszabb film" Width="150" Height="30" Margin="10 10" Click="Button_Click_2"></Button>
+            <Button Content="Átlag értékelés" Width="150" Height="30" Margin="10 10" Click="Button_Click_3"></Button>
+            <Button Content="Csak Sci-fi" Width="150" Height="30" Margin="10 10" Click="Button_Click_4"></Button>
+            <Button Content="Csak Shrek" Width="150" Height="30" Margin="10 10" Click="Button_Click_5"></Button>
+            <Button Content="Rendezés cím szerint" Width="150" Height="30" Margin="10 10" Click="Button_Click_6"></Button>
 
             <ProgressBar x:Name="progress" Width="150" Height="25" Margin="10 20 10 10"></ProgressBar>
         </StackPanel>

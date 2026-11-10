@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0">
-            <Button Content="Filmek betöltése" Width="150" Height="30" Margin="10 10"></Button>
+            <Button Content="Filmek betöltése" Width="150" Height="30" Margin="10 10" Click="Button_Click"></Button>
             <Button Content="Hány film van?" Width="150" Height="30" Margin="10  10"></Button>
             <Button Content="Leghosszabb film" Width="150" Height="30" Margin="10 10"></Button>
             <Button Content="Átlag értékelés" Width="150" Height="30" Margin="10 10"></Button>
@@ -25,7 +25,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1">
-            <DataGrid Width="500" Margin="0 50 0 0" Height="300"></DataGrid>
+            <DataGrid x:Name="dataGrid" Width="500" Margin="0 50 0 0" Height="300"></DataGrid>
         </StackPanel>
         
     </Grid>

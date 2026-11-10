@@ -116,6 +116,7 @@ new FilmAdatok("Shrek", "animáció", 90, 7.9)
 
             FilmAdatok kivalasztott=(FilmAdatok)dataGrid.SelectedItem;
             progress.Value = kivalasztott.Értékelés;
+
         }
     }        
     

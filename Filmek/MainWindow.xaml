@@ -25,7 +25,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1">
-            <DataGrid x:Name="dataGrid" Width="500" Margin="0 50 0 0" Height="300"></DataGrid>
+            <DataGrid x:Name="dataGrid" Width="500" Margin="0 50 0 0" Height="300" SelectionChanged="dataGrid_SelectionChanged"></DataGrid>
         </StackPanel>
         
     </Grid>

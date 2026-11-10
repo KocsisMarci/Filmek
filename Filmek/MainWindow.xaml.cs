@@ -56,8 +56,7 @@ new FilmAdatok("Shrek", "animáció", 90, 7.9)
         private void Button_Click(object sender, RoutedEventArgs e){
             dataGrid.ItemsSource = filmek;
             dataGrid.Items.Refresh();
-            var leghosszabb = filmek.Max(film => film.Hossz);
-            progress.Maximum = leghosszabb;
+            progress.Maximum = 10;
             progress.Minimum = 0;
 
         }
@@ -112,7 +111,12 @@ new FilmAdatok("Shrek", "animáció", 90, 7.9)
             dataGrid.Items.Refresh();
         }
 
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+            FilmAdatok kivalasztott=(FilmAdatok)dataGrid.SelectedItem;
+            progress.Value = kivalasztott.Értékelés;
+        }
     }        
     
 }

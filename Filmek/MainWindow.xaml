@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Filmek"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Filmek" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
+        <StackPanel Grid.Column="0">
+            <Button Content="Filmek betöltése" Width="150" Height="30" Margin="10 10"></Button>
+            <Button Content="Hány film van?" Width="150" Height="30" Margin="10  10"></Button>
+            <Button Content="Leghosszabb film" Width="150" Height="30" Margin="10 10"></Button>
+            <Button Content="Átlag értékelés" Width="150" Height="30" Margin="10 10"></Button>
+            <Button Content="Csak Sci-fi" Width="150" Height="30" Margin="10 10"></Button>
+            <Button Content="Csak Shrek" Width="150" Height="30" Margin="10 10"></Button>
+            <Button Content="Rendezés cím szerint" Width="150" Height="30" Margin="10 10"></Button>
+
+            <ProgressBar x:Name="progress" Width="150" Height="25" Margin="10 20 10 10"></ProgressBar>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <DataGrid Width="500" Margin="0 50 0 0" Height="300"></DataGrid>
+        </StackPanel>
+        
     </Grid>
 </Window>
